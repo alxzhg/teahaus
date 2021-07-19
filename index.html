@@ -15,10 +15,29 @@
     <link rel="shortcut icon" href="https://raw.githubusercontent.com/alxzhg/teahaus/master/logo_chrome.png">
     <meta name="description" content="Friends are more valuable than money.">
     <meta name="viewport" content="width=888">
-    <base target="_blank">
+    <!-- <base target="_blank"> -->
+
 </head>
 <body>
-    <iframe
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    
+    <iframe srcdoc="" frameborder="0" scrolling="no"></iframe>
+
+    <script>
+        $(function() {
+            $.get("https://docs.google.com/document/d/1WJ6QZOGAgIvqWGsPCBtCBBICpGB8_PSeQkFWtotlbAw/edit?usp=sharing", function(html) {
+                var contents = $("iframe").contents();
+
+                contents.find("html").html(html);
+
+                setTimeout(function() {
+                    contents.find('a[href^="http://"]').attr("target", "_blank");
+                    contents.find('a[href^="https://"]').attr("target", "_blank");
+                }, 1000); // Actually not sure if timeout is required here...
+            });
+        });
+    </script>
+    <!-- <iframe
       src="https://docs.google.com/document/d/1WJ6QZOGAgIvqWGsPCBtCBBICpGB8_PSeQkFWtotlbAw/edit?usp=sharing"
       style="
         position: fixed;
@@ -33,6 +52,6 @@
         z-index: 999999;
         height: 100%;
       ">
-    </iframe>
+    </iframe> -->
 </body>
 </html>
