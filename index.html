@@ -20,12 +20,12 @@
 </head>
 <body>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    
+
     <iframe srcdoc="" frameborder="0" scrolling="no"></iframe>
 
     <script>
         $(function() {
-            $.get("https://docs.google.com/document/d/1WJ6QZOGAgIvqWGsPCBtCBBICpGB8_PSeQkFWtotlbAw/edit?usp=sharing", function(html) {
+            $.get("https://docs.google.com/document/d/e/2PACX-1vQ_A7mYPkBE8b-nxTN9Kwy4u3pI7uNbDSU6hBzNC23WmJR6deYp70UFUqTbZZNEe0zobq33BJZ29xOK/pub?embedded=true", function(html) {
                 var contents = $("iframe").contents();
 
                 contents.find("html").html(html);
