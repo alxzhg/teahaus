@@ -22,8 +22,8 @@
 </head>
 <body>
     <script>
-        $.getJSON('http://www.whateverorigin.org/get?url=' + encodeURIComponent('hhttps://www.notion.so') + '&callback=?', function(data){
-        alert(data.contents);
+        $.getJSON('http://api.allorigins.win/get?url=https%3A//www.notion.so/Tea-Haus-40ee2b01aecd439c99fc409674ecf440&callback=?', function (data) {
+        $('#output').html(data.contents);
         });
     </script>
 
